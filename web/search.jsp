@@ -9,6 +9,15 @@
         <title>ê}èëåüçı</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>ê}èëåüçı</h1>
+        
+        <hr />
+        
+        <f:view>
+            <h:form id="serachForm">
+                <h:inputText id="searchWord" value="#{BookSeracher.word}" />
+                <h:commandButton id="submit" action="#{BookSearcher.searchBooks}" value="Go!" />
+            </h:form>
+        </f:view>
     </body>
 </html>
