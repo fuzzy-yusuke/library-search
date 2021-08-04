@@ -6,6 +6,7 @@
 
 <faces-config>
     <!--ManagedBeanを指定する-->
+    <!--MVCのコントローラの役割を果たす-->
     <managed-bean>
         <managed-bean-name>BookData</managed-bean-name>
         <managed-bean-class>BookData</managed-bean-class>
