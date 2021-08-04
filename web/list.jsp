@@ -9,10 +9,10 @@
     </head>
     <body>
         <h1>åüçıåãâ </h1>
-        
+
         <f:view>
             <h:form id="listForm">
-                <h:dataTable id="table" border="1" value="#{BookSearcher.booklist}" var="book">
+                <h:dataTable id="table" border="1" value="#{BookSearcher.bookList}" var="book">
                     <h:column>
                         <f:facet name="header">
                             <h:outputText value="É^ÉCÉgÉã"/>

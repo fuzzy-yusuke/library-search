@@ -34,11 +34,12 @@ public class BookSearcher {
     }
 
     private void searchBooks(String word) {
+        //データベースでの検索処理
         list = new ArrayList();
         try {
-            Class.forName("org.mysqldb.jdbcDriver");
-            String url = "jdbc:mysqldb:hsql://localhost";
-            Connection con = DriverManager.getConnection(url, "sa", "");
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://localhost/library";
+            Connection con = DriverManager.getConnection(url, "root", "chhagane");
 
             String selectStatement =
                 "select * " +

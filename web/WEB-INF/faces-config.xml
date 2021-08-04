@@ -5,5 +5,25 @@
   "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
 
 <faces-config>
+    <!--ManagedBeanを指定する-->
+    <managed-bean>
+        <managed-bean-name>BookData</managed-bean-name>
+        <managed-bean-class>BookData</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
     
+    <managed-bean>
+        <managed-bean-name>BookSearcher</managed-bean-name>
+        <managed-bean-class>BookSearcher</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <navigation-rule>
+        <from-view-id>/search.jsp</from-view-id>
+        <navigation-case>
+            <from-outcome>success</from-outcome>
+            <to-view-id>/list.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
 </faces-config>
