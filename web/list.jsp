@@ -17,7 +17,9 @@
                         <f:facet name="header">
                             <h:outputText value="ƒ^ƒCƒgƒ‹"/>
                         </f:facet>
-                        <h:outputText id="bookTitle" value="#{book.title}"/>
+                        <h:commandLink id="detail" action="#{BookSearcher.searchBookDetail}">
+                            <h:outputText id="bookTitle" value="#{book.title}"/>
+                        </h:commandLink>
                     </h:column>
                     <h:column>
                         <f:facet name="header">

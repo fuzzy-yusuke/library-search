@@ -1,8 +1,10 @@
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Map;
 import java.sql.*;
 import javax.sql.*;
 import javax.faces.context.FacesContext;
+import javax.faces.context.ExternalContext;
 import javax.faces.el.ValueBinding;
 
 public class BookSearcher {
@@ -31,6 +33,14 @@ public class BookSearcher {
     public String searchBooks() {
         searchBooks(word);
         return "success";
+    }
+    
+    public String searchBookDetail(){
+        FacesContext context=FacesContext.getCurrentInstance();
+        ExternalContext exContext=context.getExternalContext();
+        Map map = exContext.getRequestMap();
+        book=(BookData)map.get("book");
+        return "detail";
     }
 
     private void searchBooks(String word) {
